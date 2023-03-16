@@ -1,7 +1,8 @@
  import React from 'react';
- //import Card from '../components/Card'
+ import Card from '../components/Card/index'
  import styled from 'styled-components'
  import colors from '../style/colors'
+ import NouveauProfesseur from "./Professeurs/NouveauProfesseur/NouveauProfesseur";
 
 const CardsContainer = styled.div`
   display: grid;
@@ -20,66 +21,59 @@ const PageTitle = styled.h1`
 `
 
 const PageSubtitle = styled.h2`
-  font-size: 20px;
+  font-size: 28px;
+  font-decoration: bold;
   color: ${colors.secondary};
   font-weight: 300;
   text-align: center;
   padding-bottom: 30px;
 `
 
-// const professeurProfiles = [
-//   {
-//     name: 'Jane Doe',
-//     cours: 'Mathématiques',
-//   },
-//   {
-//     name: 'John Doe',
-//     cours: 'Developpeur frontend',
-//   },
-//   {
-//     name: 'Jeanne Biche',
-//     cours: 'Développeuse Fullstack',
-//   },
-// ]
+const professeurProfiles = [
+  {
+    name: 'Joe Dessins',
+    cours: 'Mathématiques',
+	  image: '../pages/Professeurs/pictures/76.png'
+  },
+  {
+    name: 'Johnny Test',
+    cours: 'Web et bases de données',
+	image: '../pages/Professeurs/pictures/75.png'
+  },
+  {
+    name: ' Felicia Durocher',
+    cours: 'Analyse et conception de modèle',
+  },
+]
 
-// const Professeurs = () => {
-//   return (
-//     <div>
-//       <PageTitle>Trouvez votre prestataire</PageTitle>
-//       <PageSubtitle>
-//         Chez Shiny nous réunissons les meilleurs profils pour vous.
-//       </PageSubtitle>
-//       <CardsContainer>
-//         {professeurProfiles.map((profile, index) => (
-//           <Card
-//             key={`${profile.name}-${index}`}
-//             label={profile.cours}
-//             title={profile.name}
-//           />
-//         ))}
-//       </CardsContainer>
-//     </div>
-//   )
-// }
+// const Prof = () => {
+// 	const [Prof, setProf] = useState(PROF);
 
-// export default Professeurs
-
-
+// 	const ajoutProfHandler = (cours) => {
+// 	  setProf((anciensProf) => {
+// 		return [prof, ...anciensProf];
+// 	  });
+// 	};
 const Professeurs = () => {
 return (
 	<div
 	style={{
 		display: 'flex',
-		justifyContent: 'Right',
-		alignItems: 'Right',
-		height: '100vh'
+		justifyContent: 'center',
+		alignItems: 'center',
+		height: 'display'
 	}}
 	>
-       <PageTitle>Trouvez votre prestataire</PageTitle>
-       <PageSubtitle>
-        Au Collège Montmorency, nous avons les meilleurs professeurs à vous offrir.
-       </PageSubtitle>
-	<h1>Welcome to GeeksforGeeks Events</h1>
+    {/* <NouveauProfesseur onAjoutProfesseur={ajoutProfHandler} /> */}
+        <CardsContainer>
+        {professeurProfiles.map((profile, index) => (
+          <Card
+            key={`${profile.name}-${index}`}
+            label={profile.cours}
+            title={profile.name}
+          />
+        ))}
+      </CardsContainer>
 	</div>
 );
 };

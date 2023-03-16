@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import colors from '../../style/colors'
-import DefaultPicture from 'https://cdn.discordapp.com/attachments/470953701985615897/1085267869580918904/75.png'
+// eslint-disable-next-line no-unused-vars
+import DefaultPicture from '../../pages/Professeurs/pictures/77.jpg'
 
 const CardLabel = styled.span`
   color: #5843e4;
@@ -44,7 +45,7 @@ function Card({ label, title, picture }) {
   return (
     <CardWrapper>
       <CardLabel>{label}</CardLabel>
-      <CardImage src={picture} alt="freelance" />
+      <CardImage src="https://i.ibb.co/Q669rfP/75.png" alt="Photo de Profil" />
       <CardTitle>{title}</CardTitle>
     </CardWrapper>
   )
@@ -59,7 +60,7 @@ Card.propTypes = {
 Card.defaultProps = {
   label: '',
   title: '',
-  picture: DefaultPicture,
+  picture: '',
 }
 
 export default Card

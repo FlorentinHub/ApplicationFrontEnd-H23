@@ -14,13 +14,13 @@ return (
 	<Nav>
 		<Bars />
 		<NavMenu>
-		<NavLink to='/acceuil' activeStyle>
+		<NavLink to='/acceuil'>
 			Accueil
 		</NavLink>
-		<NavLink to='/Professeurs' activeStyle>
+		<NavLink to='/Professeurs'>
 			Professeurs
 		</NavLink>
-		<NavLink to='/cours' activeStyle>
+		<NavLink to='/cours'>
 			Cours
 		</NavLink>
 		{/* Second Nav */}
