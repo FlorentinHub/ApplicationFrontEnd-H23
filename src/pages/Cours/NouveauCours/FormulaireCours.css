@@ -10,13 +10,14 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
+  color:#112F32;
 }
 
 .new-expense__controlVide label {
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
-  color:white
+  color:#88BDBC;
 }
 
 .new-expense__control input {
